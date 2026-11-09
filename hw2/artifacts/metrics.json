@@ -1,0 +1,111 @@
+{
+  "track": "nlp",
+  "model": "google-bert/bert-base-multilingual-cased",
+  "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+  "dataset": "Babelscape/wikineural",
+  "classes": [
+    "LOC",
+    "MISC",
+    "ORG",
+    "PER"
+  ],
+  "n_train": 10000,
+  "n_val": 2000,
+  "n_test": 2000,
+  "params_total": 177269769,
+  "baseline": {
+    "majority": {
+      "f1_micro": 0.33761878144214647,
+      "f1_macro": 0.3242333884593745,
+      "precision": 0.43494959193470956,
+      "recall": 0.2758830694275274
+    },
+    "random_head": {
+      "f1_micro": 0.019285057252513716,
+      "f1_macro": 0.019964320359020182,
+      "precision": 0.010763729065609177,
+      "recall": 0.0925700365408039
+    }
+  },
+  "final": {
+    "f1_micro": 0.8928303021193446,
+    "f1_macro": 0.8833851146264223,
+    "precision": 0.8863025962399284,
+    "recall": 0.8994548758328286,
+    "token_f1": 0.9075079381337704,
+    "per_type": {
+      "LOC": {
+        "precision": 0.9117221418234442,
+        "recall": 0.9375,
+        "f1-score": 0.9244314013206162,
+        "support": 1344
+      },
+      "MISC": {
+        "precision": 0.8034433285509326,
+        "recall": 0.8163265306122449,
+        "f1-score": 0.8098336948662329,
+        "support": 686
+      },
+      "ORG": {
+        "precision": 0.8690909090909091,
+        "recall": 0.8628158844765343,
+        "f1-score": 0.8659420289855073,
+        "support": 554
+      },
+      "PER": {
+        "precision": 0.9307479224376731,
+        "recall": 0.935933147632312,
+        "f1-score": 0.9333333333333332,
+        "support": 718
+      }
+    },
+    "by_language": {
+      "ru": {
+        "f1_micro": 0.888888888888889,
+        "f1_macro": 0.8662537070858845,
+        "precision": 0.8816425120772947,
+        "recall": 0.896255371393493
+      },
+      "en": {
+        "f1_micro": 0.8966745843230404,
+        "f1_macro": 0.8979624579256051,
+        "precision": 0.8908554572271387,
+        "recall": 0.9025702331141662
+      }
+    }
+  },
+  "ablation": {
+    "setting": "freeze",
+    "split": "validation",
+    "seed": 0,
+    "epochs": 3,
+    "learning_rate": 3e-05,
+    "batch_size": 16,
+    "full": {
+      "f1_micro": 0.8917082011780698,
+      "f1_macro": 0.8767552436314637,
+      "precision": 0.8846269103985616,
+      "recall": 0.8989037758830695,
+      "train_time_sec": 561.3072005840077,
+      "trainable_params": 177269769
+    },
+    "freeze": {
+      "f1_micro": 0.0,
+      "f1_macro": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "train_time_sec": 231.235760459007,
+      "trainable_params": 6921
+    }
+  },
+  "errors": {
+    "correct": 2952,
+    "boundary": 78,
+    "type": 203,
+    "missed": 51,
+    "spurious": 86
+  },
+  "device": "mps",
+  "train_time_sec": 561.3072005840077,
+  "fast_mode": false
+}

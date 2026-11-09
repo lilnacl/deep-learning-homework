@@ -1,0 +1,42 @@
+{
+  "task": "6.5",
+  "model": "google-bert/bert-base-multilingual-cased",
+  "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+  "dataset": "Babelscape/wikineural",
+  "dataset_revision": "74c9b9dca034bb1606a6769457983904bd976803",
+  "split": "validation",
+  "n_sentences": 2000,
+  "n_gold": 3284,
+  "methods": {
+    "mean": {
+      "best": {
+        "threshold": 0.6300123780965805,
+        "precision": 0.9067664483941378,
+        "recall": 0.8855054811205847,
+        "f1_micro": 0.8960098598058851,
+        "n_pred": 3207,
+        "tp": 2908
+      },
+      "delta_f1": 0.004301658627815286
+    },
+    "min": {
+      "best": {
+        "threshold": 0.632087767124176,
+        "precision": 0.9115882538680139,
+        "recall": 0.8791108404384896,
+        "f1_micro": 0.8950550302278717,
+        "n_pred": 3167,
+        "tp": 2887
+      },
+      "delta_f1": 0.0033468290498018805
+    }
+  },
+  "baseline": {
+    "threshold": 0.0,
+    "precision": 0.8846269103985616,
+    "recall": 0.8989037758830695,
+    "f1_micro": 0.8917082011780698,
+    "n_pred": 3337,
+    "tp": 2952
+  }
+}

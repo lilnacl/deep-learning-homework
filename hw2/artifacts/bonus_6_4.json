@@ -1,0 +1,42 @@
+{
+  "task": "6.4",
+  "model": "google-bert/bert-base-multilingual-cased",
+  "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+  "dataset": "Babelscape/wikineural",
+  "dataset_revision": "74c9b9dca034bb1606a6769457983904bd976803",
+  "split": "validation",
+  "n_sentences": 2000,
+  "seed": 0,
+  "method": "dynamic int8 Linear",
+  "quantized_engine": "qnnpack",
+  "previous_quantized_engine": "none",
+  "quantized_engine_after": "qnnpack",
+  "quantized_linear_layers": 73,
+  "device": "cpu",
+  "architecture": "arm64",
+  "torch_version": "2.11.0",
+  "cpu_threads": 8,
+  "bench_shape": [
+    8,
+    59
+  ],
+  "warmup_runs": 3,
+  "timed_runs": 15,
+  "eval_batch_size": 32,
+  "max_length": 128,
+  "embedding_parameter_fraction": 0.5201498739472041,
+  "results": {
+    "fp32": {
+      "f1_micro": 0.8917082011780698,
+      "state_dict_bytes": 709156977,
+      "latency_ms": 45.09120279981289
+    },
+    "int8": {
+      "f1_micro": 0.8891573542736334,
+      "state_dict_bytes": 454387661,
+      "latency_ms": 150.54595279992404
+    }
+  },
+  "speedup": 0.2995178678747958,
+  "delta_f1": -0.00255084690443641
+}

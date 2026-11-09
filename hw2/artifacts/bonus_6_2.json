@@ -1,0 +1,155 @@
+{
+  "task": "6.2",
+  "dataset": "Babelscape/wikineural",
+  "dataset_revision": "74c9b9dca034bb1606a6769457983904bd976803",
+  "seed": 0,
+  "epochs": 3,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_length": 128,
+  "device": "mps",
+  "n_by_split": {
+    "train": 10000,
+    "validation": 2000,
+    "test": 2000
+  },
+  "benchmark": {
+    "batch_size": 16,
+    "warmup": 3,
+    "repeats": 20
+  },
+  "results": {
+    "mBERT": {
+      "model": "google-bert/bert-base-multilingual-cased",
+      "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+      "scores": {
+        "validation": {
+          "f1_micro": 0.8917082011780698,
+          "f1_macro": 0.8767552436314637,
+          "precision": 0.8846269103985616,
+          "recall": 0.8989037758830695,
+          "token_f1": 0.9044649044649045,
+          "per_type": {
+            "LOC": {
+              "precision": 0.9089430894308943,
+              "recall": 0.945054945054945,
+              "f1-score": 0.9266473269788644,
+              "support": 1183
+            },
+            "MISC": {
+              "precision": 0.8275340393343419,
+              "recall": 0.832572298325723,
+              "f1-score": 0.8300455235204856,
+              "support": 657
+            },
+            "ORG": {
+              "precision": 0.8097014925373134,
+              "recall": 0.8235294117647058,
+              "f1-score": 0.8165569143932268,
+              "support": 527
+            },
+            "PER": {
+              "precision": 0.9373626373626374,
+              "recall": 0.9302071973827699,
+              "f1-score": 0.9337712096332785,
+              "support": 917
+            }
+          },
+          "by_language": {
+            "ru": {
+              "f1_micro": 0.8852157943067034,
+              "f1_macro": 0.8515374983678455,
+              "precision": 0.8795620437956204,
+              "recall": 0.8909426987060998
+            },
+            "en": {
+              "f1_micro": 0.8980322003577818,
+              "f1_macro": 0.8923632970017363,
+              "precision": 0.8895451860602481,
+              "recall": 0.9066827212522577
+            }
+          }
+        },
+        "test": {
+          "f1_micro": 0.8928303021193446,
+          "f1_macro": 0.8833851146264223,
+          "precision": 0.8863025962399284,
+          "recall": 0.8994548758328286,
+          "token_f1": 0.9075079381337704,
+          "per_type": {
+            "LOC": {
+              "precision": 0.9117221418234442,
+              "recall": 0.9375,
+              "f1-score": 0.9244314013206162,
+              "support": 1344
+            },
+            "MISC": {
+              "precision": 0.8034433285509326,
+              "recall": 0.8163265306122449,
+              "f1-score": 0.8098336948662329,
+              "support": 686
+            },
+            "ORG": {
+              "precision": 0.8690909090909091,
+              "recall": 0.8628158844765343,
+              "f1-score": 0.8659420289855073,
+              "support": 554
+            },
+            "PER": {
+              "precision": 0.9307479224376731,
+              "recall": 0.935933147632312,
+              "f1-score": 0.9333333333333332,
+              "support": 718
+            }
+          },
+          "by_language": {
+            "ru": {
+              "f1_micro": 0.888888888888889,
+              "f1_macro": 0.8662537070858845,
+              "precision": 0.8816425120772947,
+              "recall": 0.896255371393493
+            },
+            "en": {
+              "f1_micro": 0.8966745843230404,
+              "f1_macro": 0.8979624579256051,
+              "precision": 0.8908554572271387,
+              "recall": 0.9025702331141662
+            }
+          }
+        }
+      },
+      "train_time_sec": 561.3072005840077,
+      "params": 177269769,
+      "weights_mib": 676.2305030822754,
+      "forward": {
+        "mean_ms": 88.6185895978997,
+        "std_ms": 1.2476445874300304
+      }
+    },
+    "DistilmBERT": {
+      "model": "distilbert/distilbert-base-multilingual-cased",
+      "revision": "45c032ab32cc946ad88a166f7cb282f58c753c2e",
+      "scores": {
+        "validation": {
+          "f1_micro": 0.8741501737422572,
+          "f1_macro": 0.858626761684258,
+          "precision": 0.8674662668665667,
+          "recall": 0.880937880633374
+        },
+        "test": {
+          "f1_micro": 0.8702450759284318,
+          "f1_macro": 0.8576540606295457,
+          "precision": 0.8641385488205434,
+          "recall": 0.8764385221078135
+        }
+      },
+      "train_time_sec": 326.03895704199385,
+      "params": 134741001,
+      "weights_mib": 513.9961280822754,
+      "forward": {
+        "mean_ms": 45.12267714817426,
+        "std_ms": 0.17168956595138407
+      }
+    }
+  }
+}

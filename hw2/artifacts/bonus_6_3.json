@@ -1,0 +1,115 @@
+{
+  "task": "6.3",
+  "model": "google-bert/bert-base-multilingual-cased",
+  "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+  "dataset": "Babelscape/wikineural",
+  "dataset_revision": "74c9b9dca034bb1606a6769457983904bd976803",
+  "split": "validation",
+  "n_sentences": 2000,
+  "seed": 0,
+  "max_length": 128,
+  "typo_rate": 0.15,
+  "typo_rule": "Перестановка соседних разных букв с вероятностью 0.15 для слов из букв длиной не менее 4 символов",
+  "results": {
+    "original": {
+      "f1_micro": 0.8917082011780698,
+      "f1_macro": 0.8767552436314637,
+      "precision": 0.8846269103985616,
+      "recall": 0.8989037758830695,
+      "delta_f1": 0.0,
+      "subwords_per_word": 1.4275118161823201,
+      "truncated_sentences": 3,
+      "lost_words": 49,
+      "changed_words": 0,
+      "by_language": {
+        "ru": {
+          "f1_micro": 0.8852157943067034,
+          "f1_macro": 0.8515374983678455,
+          "precision": 0.8795620437956204,
+          "recall": 0.8909426987060998
+        },
+        "en": {
+          "f1_micro": 0.8980322003577818,
+          "f1_macro": 0.8923632970017363,
+          "precision": 0.8895451860602481,
+          "recall": 0.9066827212522577
+        }
+      }
+    },
+    "lower": {
+      "f1_micro": 0.26442721791559004,
+      "f1_macro": 0.25649602724080645,
+      "precision": 0.4514705882352941,
+      "recall": 0.18696711327649207,
+      "delta_f1": -0.6272809832624797,
+      "subwords_per_word": 1.464223875707801,
+      "truncated_sentences": 3,
+      "lost_words": 51,
+      "changed_words": 6866,
+      "by_language": {
+        "ru": {
+          "f1_micro": 0.3046192259675406,
+          "f1_macro": 0.28571584109311454,
+          "precision": 0.46923076923076923,
+          "recall": 0.2255083179297597
+        },
+        "en": {
+          "f1_micro": 0.2213297634984382,
+          "f1_macro": 0.21912014826700643,
+          "precision": 0.42758620689655175,
+          "recall": 0.1493076459963877
+        }
+      }
+    },
+    "upper": {
+      "f1_micro": 0.18155035904989875,
+      "f1_macro": 0.1871817711925614,
+      "precision": 0.2296227293898463,
+      "recall": 0.15012180267965894,
+      "delta_f1": -0.7101578421281711,
+      "subwords_per_word": 3.4407552997332584,
+      "truncated_sentences": 209,
+      "lost_words": 2039,
+      "changed_words": 34056,
+      "by_language": {
+        "ru": {
+          "f1_micro": 0.1810344827586207,
+          "f1_macro": 0.1900818794094203,
+          "precision": 0.4064516129032258,
+          "recall": 0.11645101663585952
+        },
+        "en": {
+          "f1_micro": 0.1818725695483099,
+          "f1_macro": 0.19789279774831756,
+          "precision": 0.1807372175980975,
+          "recall": 0.18302227573750754
+        }
+      }
+    },
+    "typos": {
+      "f1_micro": 0.8617392624070419,
+      "f1_macro": 0.8446469264894808,
+      "precision": 0.859001512859304,
+      "recall": 0.8644945188794153,
+      "delta_f1": -0.02996893877102791,
+      "subwords_per_word": 1.5417193130235387,
+      "truncated_sentences": 5,
+      "lost_words": 72,
+      "changed_words": 3403,
+      "by_language": {
+        "ru": {
+          "f1_micro": 0.8656992899042915,
+          "f1_macro": 0.8281086439784563,
+          "precision": 0.8675742574257426,
+          "recall": 0.8638324091189156
+        },
+        "en": {
+          "f1_micro": 0.857910447761194,
+          "f1_macro": 0.8518388062611162,
+          "precision": 0.8507992895204263,
+          "recall": 0.8651414810355208
+        }
+      }
+    }
+  }
+}
